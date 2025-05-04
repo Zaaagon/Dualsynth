@@ -47,7 +47,7 @@ function layoutUI() {
 
     createP("OSC " + (t + 1)).position(x + 10, y - 28).style('color', 'white').style('margin', '0px');
 
-    (function(currentT, x, boxWidth, y) {
+    /*(function(currentT, x, boxWidth, y) {
       var toggleButton = createButton("ON");
       toggleButton.position(x + boxWidth - 50, y - 30);
       oscEnabledList[currentT] = true;
@@ -57,7 +57,7 @@ function layoutUI() {
         toggleButton.html(oscEnabledList[currentT] ? "ON" : "OFF");
       });
       toggleButtonList.push(toggleButton);
-    })(t, x, boxWidth, y);
+    })(t, x, boxWidth, y);*/
 
     var slider = createSlider(16, 108, 69, 1);
     slider.position(x, y + boxHeight + 10);
