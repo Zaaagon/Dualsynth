@@ -2,10 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dualsynth</title>
+  <title>DualSynth</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.dom.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    #synth-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 0px;
+      padding-top: 0px; 
+      position: relative;
+    }
+
+
+    .osc-container {
+      border: 1px solid white;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    canvas {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
+  <div id="synth-container"></div>
   <script src="sketch.js"></script>
 </body>
 </html>
