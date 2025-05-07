@@ -361,7 +361,7 @@ var sketch = function(p) {
 		  	let a = document.createElement('a');
 		  	a.style.display = 'none';
 		  	a.href = url;
-		  	a.download = 'dualsynth.wav';
+		  	a.download = 'yoursynth.wav';
 		  	document.body.appendChild(a);
 		  	a.click();
 		  	window.URL.revokeObjectURL(url);
@@ -401,8 +401,8 @@ var sketch = function(p) {
 	  
 			while(pos < length) {
 		  		for(i = 0; i < numOfChan; i++) {
-					sample = Math.max(-1, Math.min(1, channels[i][offset])); // clamp
-					sample = (sample * 32767) | 0; // convert to 16-bit
+					sample = Math.max(-1, Math.min(1, channels[i][offset])); 
+					sample = (sample * 32767) | 0;  
 					view.setInt16(pos, sample, true);
 					pos += 2;
 		  		}
